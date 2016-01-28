@@ -29,10 +29,14 @@ describe('Space', function(){
 });
 
 describe('Board', function() {
-  it("creates 9 spaces", function() {
+  it("creates a board with 9 spots", function() {
   	var testBoard = new Board ();
-  	expect(testBoard.spaces[1].xCoordinate).to.equal(1);
    });
+
+   it("will find a spot on the board by coordinates", function() {
+    var testBoard = new Board();
+    expect(testBoard.findSpot(1,1).yCoordinate).to.equal(1);
+  });
 });
 
 
