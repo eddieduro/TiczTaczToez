@@ -18,7 +18,14 @@ describe('Space', function(){
 	it("returns the player's mark", function() {
       var testSpace = new Space(1,2);
       expect(testSpace.yCoordinate).to.equal(2);
-   });
+   	});
+
+	it("lets a player mark a space", function() {
+      var testPlayer = new Player("X")      
+      var testSpace = new Space(1,2);
+      testSpace.markedBy(testPlayer)
+      expect(testSpace.player).to.equal(testPlayer);
+   	});
 });
 
 
